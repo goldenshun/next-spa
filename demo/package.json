@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "next build",
-    "dev": "next",
+    "dev": "node dev-server.js",
     "export": "next export",
     "lint": "eslint --ext .js .",
     "serve": "serve",
@@ -26,7 +26,8 @@
     "prop-types": "15.6.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
-    "serve": "10.1.1"
+    "serve": "10.1.1",
+    "serve-handler": "5.0.7"
   },
   "devDependencies": {
     "babel-eslint": "8.2.2",
