@@ -1,14 +1,20 @@
-const handler = require('serve-handler');
-const http = require('http');
+const { createServer } = require('http');
+const { parse } = require('url');
 const next = require('next');
-const config = require('./serve.json');
 
+const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
-next({ dev });
-// const handle = app.getRequestHandler()
+const app = next({ dev });
 
-const server = http.createServer((request, response) => handler(request, response, config));
-
-server.listen(3000, () => {
-  console.log('Running at http://localhost:3000');
-});
+app.prepare()
+  .then(() => {
+    createServer((req, res) => {
+      const parsedUrl = parse(req.url, true);
+      const { query } = parsedUrl;
+      app.render(req, res, '/_spa', query);
+    })
+      .listen(port, (err) => {
+        if (err) throw err;
+        console.log(`> Ready on http://localhost:${port}`);
+      });
+  });
