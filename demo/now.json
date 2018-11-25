@@ -1,0 +1,6 @@
+{
+  "name": "next-spa-demo",
+  "alias": "next-spa-demo",
+  "type": "static",
+  "public": true
+}
