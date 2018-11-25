@@ -1,6 +1,0 @@
-{
-  "public": "out",
-  "rewrites": [
-    { "source": "/**", "destination": "/_spa/index.html" }
-  ]
-}

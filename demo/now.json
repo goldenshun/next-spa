@@ -1,6 +1,13 @@
 {
   "name": "next-spa-demo",
+  "version": 1,
   "alias": "next-spa-demo",
+  "public": true,
   "type": "static",
-  "public": true
+  "static": {
+    "public": "public",
+    "rewrites": [
+      { "source": "/**", "destination": "/_spa/index.html" }
+    ]
+  }
 }

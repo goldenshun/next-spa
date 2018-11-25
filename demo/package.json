@@ -9,8 +9,6 @@
     "dev": "node dev-server.js",
     "export": "next export",
     "lint": "eslint --ext .js .",
-    "now-build": "next build && next export --outdir dist",
-    "serve": "serve",
     "start": "next start"
   },
   "repository": {
@@ -27,7 +25,6 @@
     "prop-types": "15.6.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
-    "serve": "10.1.1",
     "serve-handler": "5.0.7"
   },
   "devDependencies": {
