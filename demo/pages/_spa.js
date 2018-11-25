@@ -3,7 +3,7 @@ import { Router } from '../routes';
 
 class NextSpa extends React.Component {
   componentDidMount() {
-    Router.replaceRoute(window.location.pathname); // eslint-disable-line no-undef
+    Router.replaceRoute(window.location.pathname + window.location.search); // eslint-disable-line no-undef
   }
 
   render() {
