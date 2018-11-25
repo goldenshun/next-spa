@@ -9,6 +9,7 @@
     "dev": "node dev-server.js",
     "export": "next export",
     "lint": "eslint --ext .js .",
+    "now-build": "next build && next export --outdir dist",
     "serve": "serve",
     "start": "next start"
   },
