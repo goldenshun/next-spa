@@ -3,8 +3,7 @@ import { Router } from '../routes';
 
 class NextSpa extends React.Component {
   componentDidMount() {
-    console.log('window.location', window.location);
-    Router.replaceRoute('/user/124');
+    Router.replaceRoute(window.location.pathname); // eslint-disable-line no-undef
   }
 
   render() {
