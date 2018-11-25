@@ -19,6 +19,7 @@
   "license": "MIT",
   "homepage": "https://github.com/goldenshun/next-spa-demo#readme",
   "dependencies": {
+    "hoist-non-react-statics": "3.1.0",
     "next": "7.0.1",
     "react": "16.5.2",
     "react-dom": "16.5.2"
