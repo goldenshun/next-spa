@@ -11,7 +11,7 @@ app.prepare()
     createServer((req, res) => {
       const parsedUrl = parse(req.url, true);
       const { query } = parsedUrl;
-      app.render(req, res, '/_spa', query);
+      app.render(req, res, '/', query);
     })
       .listen(port, (err) => {
         if (err) throw err;

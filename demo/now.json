@@ -7,7 +7,7 @@
   "static": {
     "public": "public",
     "rewrites": [
-      { "source": "/**", "destination": "/_spa/index.html" }
+      { "source": "/**", "destination": "/index.html" }
     ]
   }
 }

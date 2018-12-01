@@ -1,4 +1,5 @@
-import { Link } from '../routes';
+import withNextSpa from '../withNextSpa';
+import { Link, Router } from '../routes';
 
 const Index = () => (
   <>
@@ -7,4 +8,4 @@ const Index = () => (
   </>
 );
 
-export default Index;
+export default withNextSpa(Router)(Index);
