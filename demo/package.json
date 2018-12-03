@@ -20,7 +20,7 @@
   "homepage": "https://github.com/goldenshun/next-spa-demo#readme",
   "dependencies": {
     "hoist-non-react-statics": "3.1.0",
-    "next": "7.0.1",
+    "next": "7.0.2",
     "next-routes": "1.4.2",
     "next-spa": "../",
     "prop-types": "15.6.2",
