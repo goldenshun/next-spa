@@ -6,6 +6,7 @@
   "files": [
     "dist",
     "index.js",
+    "config.js",
     "README.md"
   ],
   "sideEffects": false,

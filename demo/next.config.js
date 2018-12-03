@@ -1,3 +1,3 @@
-const withNextSpa = require('next-spa/next-spa-config');
+const withNextSpa = require('next-spa/config');
 
 module.exports = withNextSpa();
