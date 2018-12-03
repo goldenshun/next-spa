@@ -28,6 +28,32 @@ const Index = () => (
 export default withNextSpa(Router)(Index);
 ```
 
+### dev-server
+For local development, you need to configure your server to always serve the index.
+```
+const { createServer } = require('http');
+const { parse } = require('url');
+const next = require('next');
+
+const port = parseInt(process.env.PORT, 10) || 3000;
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+
+app.prepare()
+  .then(() => {
+    createServer((req, res) => {
+      const parsedUrl = parse(req.url, true);
+      const { query } = parsedUrl;
+      app.render(req, res, '/', query); // Every request is served with the index.
+    })
+      .listen(port, (err) => {
+        if (err) throw err;
+        console.log(`> Ready on http://localhost:${port}`);
+      });
+  });
+
+```
+
 ### Configuration
 More than likely, you want to [statically export](https://nextjs.org/docs/#static-html-export) your app. In a single page app, you only need to export the index. You can configure this yourself or you can use the built-in config:
 ```
@@ -35,4 +61,16 @@ More than likely, you want to [statically export](https://nextjs.org/docs/#stati
 const withNextSpa = require('next-spa/config');
 
 module.exports = withNextSpa();
+```
+
+### Production
+There are many ways to route all traffic to your index page in production. If you are using [now](https://zeit.co/now), you can add this block to your `now.json` file:
+
+```
+"static": {
+  "public": "public",
+  "rewrites": [
+    { "source": "/**", "destination": "/index.html" }
+  ]
+}
 ```
