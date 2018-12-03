@@ -6,7 +6,7 @@ const enhance = Router => (WrappedComponent) => {
     state = { isClient: false };
 
     componentDidMount() {
-      const { pathname, search } = window.location; // eslint-disable-line no-undef
+      const { pathname, search } = window.location;
       if (pathname !== '/') {
         Router.replaceRoute(pathname + search);
       } else {
