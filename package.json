@@ -1,0 +1,54 @@
+{
+  "name": "next-spa",
+  "version": "1.0.0",
+  "description": "Builds single page applications with Next.js",
+  "main": "index.js",
+  "files": [
+    "dist",
+    "index.js",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "NODE_ENV=production babel src -d dist",
+    "build:dev": "babel src -d dist  --source-maps inline",
+    "lint": "eslint --ext .js .",
+    "prepare": "npm run build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldenshun/next-spa.git"
+  },
+  "keywords": [
+    "react",
+    "spa",
+    "next"
+  ],
+  "author": "Sean Connolly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goldenshun/next-spa/issues"
+  },
+  "homepage": "https://github.com/goldenshun/next-spa#readme",
+  "dependencies": {
+    "hoist-non-react-statics": "3.0.1"
+  },
+  "peerDependencies": {
+    "next": "^7.0.0",
+    "next-routes": "^1.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.1.2",
+    "@babel/core": "7.1.2",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
+    "eslint": "5.5.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3"
+  }
+}

@@ -1,4 +1,5 @@
-import withNextSpa from '../withNextSpa';
+import React from 'react';
+import withNextSpa from 'next-spa';
 import { Link, Router } from '../routes';
 
 const Index = () => (
