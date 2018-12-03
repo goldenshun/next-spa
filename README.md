@@ -16,6 +16,7 @@ To enable spa mode you will need to:
 `next-spa` depends on routes defined with [next-routes](https://github.com/fridays/next-routes). Follow instructions there to create a `routes.js` file.
 
 ### withNextSpa
+Wrap in your `index.js` page with the `next-spa` HOC.
 ```
 import withNextSpa from 'next-spa';
 import { Router, Link } from '../routes'; // The next-routes file.
@@ -74,3 +75,4 @@ There are many ways to route all traffic to your index page in production. If yo
   ]
 }
 ```
+This unfortunately only works in Now V1. If you know how to do this in V2, create an issue and I can update the demo.
